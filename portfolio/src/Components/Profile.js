@@ -1,18 +1,23 @@
 import React from 'react'
+import'../CSS/style.css'
 
 export default function Profile() {
 
   const openResume = () => {
-    window.open('./assets/resume-example.pdf');
+    window.open('')
     }
 
     const redirectToContact = () => {
-      window.location.href = '/contact'; // Updated to '/contact'
+      window.location.href = '/contact' // Updated to '/contact'
     }
   return (
     <section id="profile">
       <div className="section-pic-container">
-        <img src="" alt="profile picture" className="prof_img" />
+      <img
+            src=""
+            alt="My Github profile"
+            className="prof_img"
+          />
       </div>
       <div className="section-text">
         <p className="section-text-p1">Hello, I'm</p>
