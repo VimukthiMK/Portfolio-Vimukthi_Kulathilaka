@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import'./CSS/style.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './Components/Header';
