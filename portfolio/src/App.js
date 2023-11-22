@@ -1,6 +1,6 @@
-import React from 'react'
-import'./CSS/style.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import './CSS/style.css';
+import { BrowserRouter as Router, Routes,  Route } from 'react-router-dom';
 
 import Header from './Components/Header';
 import Profile from './Components/Profile';
@@ -16,11 +16,11 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" exact component={Profile} />
-          <Route path="/about" component={About} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/" exact element={<Profile />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
