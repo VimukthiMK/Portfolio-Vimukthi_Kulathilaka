@@ -29,3 +29,8 @@
     color: var(--bg-color);
   }
   
+  .arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 4rem;
+  } 
