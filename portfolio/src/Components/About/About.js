@@ -1,4 +1,11 @@
 import React from 'react'
+import './About.css'
+import aboutImage from '../../Assets/About-pic.jpg';
+import expericenceIcon from '../../Assets/experience.png';
+import eduIcon from '../../Assets/education.png';
+import arrowIcon from '../../Assets/arrow.png';
+
+
 
 export default function About() {
   return (
@@ -8,8 +15,8 @@ export default function About() {
       <div className="section-container">
         <div className="section-pic-container">
           <img
-            src="./assets/About-pic.jpg"
-            alt="Profile picture"
+            src={aboutImage}
+            alt="Aboutpic"
             className="about-pic"
           />
         </div>
@@ -17,7 +24,7 @@ export default function About() {
           <div className="about-containers">
             <div className="details-container">
               <img
-                src="./assets/experience.png"
+                src={expericenceIcon}
                 alt="Experience icon"
                 className="icon"
               />
@@ -26,7 +33,7 @@ export default function About() {
             </div>
             <div className="details-container">
               <img
-                src="./assets/education.png"
+                src={eduIcon}
                 alt="Education icon"
                 className="icon"
               />
@@ -46,7 +53,7 @@ export default function About() {
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src={arrowIcon}
         alt="Arrow icon"
         className="icon arrow"
         onClick={() => window.location.href = '#experience'}
