@@ -253,7 +253,7 @@ export default function Experience() {
       <img
         src={arrowIcon}
         alt="Arrow icon"
-        classNameName="icon arrow"
+        className="icon arrow"
         onClick={() => window.location.href = '#projects'}
       />
     </section>
