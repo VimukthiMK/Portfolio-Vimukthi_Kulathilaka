@@ -1,0 +1,41 @@
+#experience {
+    position: relative;
+  }
+  
+  .experience-sub-title {
+    color: rgb(96, 165, 211);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center; 
+  }
+  
+  article {
+    display: flex;
+    width: 10rem;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  article .icon {
+    cursor: default;
+  }
+  
+  .arrow {
+      position: absolute;
+      right: -5rem;
+      bottom: 2.5rem;
+    }
