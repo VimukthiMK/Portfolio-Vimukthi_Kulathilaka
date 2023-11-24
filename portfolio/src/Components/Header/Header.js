@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import'./Header.css'
-import ToggleMenu from '../Togglemenu/Togglemenu'
+import ToggleMenu from './Togglemenu'
 
 
 export default function Header() {

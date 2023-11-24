@@ -37,7 +37,7 @@ const Profile = () => {
       <div className="section-text">
         <p className="section-text-p1">Hello, I'm</p>
         <h1 className="title">Vimukthi Kulathilaka</h1>
-        <p className="section-text-p2">And I'm a Software Developer</p>
+        <p className="section-text-p2" >And I'm a Software Developer</p>
         <div className="btn-container">
           <button className="btn btn-color-2" onClick={downloadCV}>
             Download CV
