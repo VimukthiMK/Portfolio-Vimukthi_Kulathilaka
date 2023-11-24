@@ -1,4 +1,10 @@
 import React from 'react'
+import './Contact.css'
+
+import linkedinIcon from '../../Assets/linkedin.png';
+import emailIcon from '../../Assets/email.png';
+
+
 
 export default function Contact() {
   return (
@@ -8,7 +14,7 @@ export default function Contact() {
       <div className="contact-info-upper-container">
         <div className="contact-info-container">
           <img
-            src="./assets/email.png"
+            src={emailIcon}
             alt="Email icon"
             className="icon contact-icon email-icon"
           />
@@ -16,7 +22,7 @@ export default function Contact() {
         </div>
         <div className="contact-info-container">
           <img
-            src="./assets/linkedin.png"
+            src={linkedinIcon}
             alt="LinkedIn icon"
             className="icon contact-icon"
           />
