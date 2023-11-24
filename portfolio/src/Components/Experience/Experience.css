@@ -1,5 +1,8 @@
 #experience {
     position: relative;
+    height: 900px;
+    max-height: fit-content;
+
   }
   
   .experience-sub-title {
@@ -39,3 +42,13 @@
       right: -5rem;
       bottom: 0rem;
     }
+
+    .details-container {
+        padding: 1.5rem;
+        flex: 1;
+        background: var(--detail-container-color);
+        border-radius: 2rem;
+        border: var(--border-color) 0.1rem solid;
+        border-color: var(--border-color-2);
+        text-align: center;
+      }
