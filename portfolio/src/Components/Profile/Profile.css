@@ -110,4 +110,10 @@
   .btn-container {
     gap: 1rem;
   }
-   
+  .prof_img{
+    border-radius:50% ;
+    transition: transform .5s;
+  }
+  .prof_img:hover{
+    transform: scale(1.2);
+  }

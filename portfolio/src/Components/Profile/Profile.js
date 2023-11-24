@@ -31,7 +31,7 @@ const Profile = () => {
       <img
             src={profileImage}
             alt="profile picture"
-            className="iprof_img"
+            className="prof_img"
       />
       </div>
       <div className="section-text">
