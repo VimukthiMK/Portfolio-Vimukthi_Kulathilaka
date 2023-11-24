@@ -1,0 +1,31 @@
+
+#projects {
+    position: relative;
+  }
+  
+  .color-container {
+    border-color: var(--border-color-2);
+    background: var(--bg-color);
+  }
+  
+  .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .project-title {
+    margin: 1rem;
+    color: var(--link-color);
+  }
+  
+  .project-btn {
+    border-color: var(--border-color-2);
+    background-color: var(--border-color-2);
+  }
+  .project-btn:hover {
+    border-color: var(--border-color-2);
+    background-color: var(--link-color);
+    color: var(--bg-color);
+  }
+  

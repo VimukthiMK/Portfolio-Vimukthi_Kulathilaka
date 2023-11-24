@@ -1,5 +1,13 @@
 import React from 'react'
 
+import './Projects.css'
+
+import arrowIcon from '../../Assets/arrow.png';
+import proimg1 from '../../Assets/project 1.PNG';
+import proimg2  from '../../Assets/project 2.PNG';
+import proimg3  from '../../Assets/project 3.PNG';
+
+
 export default function Projects() {
   return (
     <section id="projects">
@@ -10,7 +18,7 @@ export default function Projects() {
           <div className="details-container color-container">
             <div className="article-container">
               <img
-                src="./assets/project 1.PNG"
+                src={proimg1}
                 alt="Project 1"
                 className="project-img"
               />
@@ -30,7 +38,7 @@ export default function Projects() {
           <div className="details-container color-container">
             <div className="article-container">
               <img
-                src="./assets/project 2.PNG"
+                src={proimg2}
                 alt="Project 2"
                 className="project-img"
               />
@@ -50,7 +58,7 @@ export default function Projects() {
           <div className="details-container color-container">
             <div className="article-container">
               <img
-                src="./assets/project 3.PNG"
+                src={proimg3}
                 alt="Project 3"
                 className="project-img"
               />
@@ -76,7 +84,7 @@ export default function Projects() {
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src={arrowIcon}
         alt="Arrow icon"
         className="icon arrow"
         onClick={() => window.location.href = '#contact'}
