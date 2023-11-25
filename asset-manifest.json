@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.2e6d0c63.css",
+    "main.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.e4bbfada.js",
+    "static/media/About-pic.jpg": "/Portfolio-Vimukthi_Kulathilaka/static/media/About-pic.279b559340e6e8500e8f.jpg",
+    "static/media/project 1.PNG": "/Portfolio-Vimukthi_Kulathilaka/static/media/project 1.6ed1264b183e30c4d8ac.PNG",
+    "static/media/project 3.PNG": "/Portfolio-Vimukthi_Kulathilaka/static/media/project 3.a6ae9bef462d1a819d08.PNG",
+    "static/media/project 2.PNG": "/Portfolio-Vimukthi_Kulathilaka/static/media/project 2.b82a8e73b51cb7c984e5.PNG",
+    "static/media/Vimukthi.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/Vimukthi.18be3ade8989d81480ef.png",
+    "static/media/email.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/email.761df3bc69bdc631bd2f.png",
+    "static/media/checkmark.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/checkmark.86728d9a224a2c7c95d4.png",
+    "static/media/arrow.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/arrow.0dfabb0beab795eea0ab.png",
+    "static/media/linkedin.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/linkedin.032cf8a63be2f0f4d425.png",
+    "index.html": "/Portfolio-Vimukthi_Kulathilaka/index.html",
+    "main.2e6d0c63.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.2e6d0c63.css.map",
+    "main.e4bbfada.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.e4bbfada.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e6d0c63.css",
+    "static/js/main.e4bbfada.js"
+  ]
+}
