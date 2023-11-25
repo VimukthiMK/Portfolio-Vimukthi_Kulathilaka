@@ -64,7 +64,7 @@ export default function Projects() {
               />
             </div>
             <h2 className="experience-sub-title project-title">Portfolio </h2>
-            <p>A simple resume webpage with responsiveness.</p>
+            <p>Portfolio Website Using the Power of ReactJs</p>
             <br />
             <div className="btn-container">
               <button
