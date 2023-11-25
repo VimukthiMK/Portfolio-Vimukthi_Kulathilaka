@@ -4,26 +4,9 @@ import linkedinIcon from '../../Assets/linkedin.png';
 import githubIcon from '../../Assets/github.png';
 import mediumIcon from '../../Assets/medium.png';
 import './Profile.css'
+import CV from '../../Assets/Vimukthi-kulathilaka-CV.pdf'
 
 const Profile = () => {
-  const downloadCV = () => {
-    const resumeUrl = '../Assets/Vimukthi-kulathilaka-CV.pdf';
-
-    // Create a temporary anchor element
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Vimukthi-kulathilaka-CV.pdf';
-
-    // Append the anchor to the body
-    document.body.appendChild(link);
-
-    // Trigger a click on Anchor
-    link.click();
-
-    // Remove the anchor 
-    document.body.removeChild(link);
-  };
-
   // Text animation
   
   useEffect(() => {
@@ -69,7 +52,7 @@ const Profile = () => {
         <p className="section-text-p2" id="section-text-p2" >And I'm a Software Developer</p>
         </div>
         <div className="btn-container">
-          <button className="btn btn-color-2" onClick={downloadCV}>
+          <button className="btn btn-color-2" onClick={() => window.open(CV, '_blank')}>
             Download CV
           </button>
           <button className="btn btn-color-1" onClick={() => window.location.href = '.#contact'}>
