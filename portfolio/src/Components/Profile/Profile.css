@@ -117,3 +117,8 @@
   .prof_img:hover{
     transform: scale(1.2);
   }
+  .Animate_text-container{
+    height: 60px;
+    overflow: hidden;
+    
+  }

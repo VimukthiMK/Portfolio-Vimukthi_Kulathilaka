@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import profileImage from '../../Assets/Vimukthi.png';
 import linkedinIcon from '../../Assets/linkedin.png';
 import githubIcon from '../../Assets/github.png';
@@ -24,6 +24,34 @@ const Profile = () => {
     document.body.removeChild(link);
   };
 
+  // Text animation
+  
+  useEffect(() => {
+    const textElement = document.getElementById('section-text-p2');
+    const textToType = "And I'm a Software Developer";
+    let index = 0;
+
+    function typeAndErase() {
+      const currentText = textElement.innerText;
+      const speed = 100; // Animation speed
+      const pauseTime = 1000; // Pause time
+
+      if (index <= textToType.length) {
+        textElement.innerText = textToType.slice(0, index);
+        index++;
+      } else {
+        index = 0;
+        setTimeout(typeAndErase, pauseTime);
+        return;
+      }
+
+      setTimeout(typeAndErase, speed);
+    }
+
+    // Start the typing and erasing animation
+    typeAndErase();
+  }, []);
+
   return (
     <>
     <section id="profile">
@@ -37,7 +65,9 @@ const Profile = () => {
       <div className="section-text">
         <p className="section-text-p1">Hello, I'm</p>
         <h1 className="title">Vimukthi Kulathilaka</h1>
-        <p className="section-text-p2" >And I'm a Software Developer</p>
+        <div className='Animate_text-container'>
+        <p className="section-text-p2" id="section-text-p2" >And I'm a Software Developer</p>
+        </div>
         <div className="btn-container">
           <button className="btn btn-color-2" onClick={downloadCV}>
             Download CV
