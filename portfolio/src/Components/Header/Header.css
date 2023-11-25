@@ -34,6 +34,8 @@
   
   .logo {
     font-size: 2rem;
+    color: var(--link-color);
+
   }
   
   .logo:hover {
