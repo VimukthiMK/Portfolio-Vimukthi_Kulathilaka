@@ -12,13 +12,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-          
-      - run: npm ci
-      - run: npm test
+
+      - name: Install dependencies and run tests
+        run: |
+          cd portfolio
+          npm ci
+          npm test
 
   publish-gpr:
     needs: build
@@ -27,16 +33,25 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+
+      - name: Install dependencies
+        run: |
+          cd portfolio
+          npm ci
+
+      - name: Publish to GitHub Packages
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      
+
       - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
