@@ -19,27 +19,29 @@
     font-size: 1.5rem;
   }
   
-  a {
+  .nav-links a {
     color: var(--link-color);
     text-decoration: none;
     text-decoration-color: var(--bg-color);
   }
   
-  a:hover {
+  .nav-links a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: var(--text-decoration-color);
+    transition: 0.5s;
   }
   
   .logo {
     font-size: 2rem;
     color: var(--link-color);
-
+    background: none;
+    border: none;
   }
   
   .logo:hover {
-    cursor: default;
+    cursor: pointer;
   }
   
   /* HAMBURGER MENU */
@@ -88,6 +90,11 @@
       color: var(--link-color);
       text-decoration: none;
       transition: all 0.3 ease-in-out;
+    }
+
+    .menu-links a:hover {
+      color: var(--link-hover-color);
+      text-decoration: underline;
     }
     
     .menu-links li {

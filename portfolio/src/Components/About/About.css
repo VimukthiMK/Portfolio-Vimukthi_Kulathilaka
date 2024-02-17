@@ -34,12 +34,12 @@
     padding: 1.5rem;
     flex: 1;
     background: var(--detail-container-color);
-    border-radius: 2rem;
-    border: var(--border-color) 0.1rem solid;
-    border-color: var(--border-color-2);
+    border-radius: 1rem;
+    border:  0.1rem solid;
+    border-color: var(--bg-color);
     text-align: center;
   }
-  
+
   .section-container {
     gap: 4rem;
     height: 80%;

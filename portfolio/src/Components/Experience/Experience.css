@@ -1,54 +1,59 @@
-#experience {
-    position: relative;
-    height: auto;
- 
+#experience{
+  padding: 30px 0;
 
-  }
-  
-  .experience-sub-title {
-    color: rgb(96, 165, 211);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-  
-  .experience-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .article-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: center; 
-  }
-  
-  article {
-    display: flex;
-    width: 10rem;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-  }
-  
-  article .icon {
-    cursor: default;
-  }
-  
-  .arrow {
-      position: absolute;
-      right: -5rem;
-      bottom: 3rem;
-    }
+}
 
-    .details-container {
-        padding: 1.5rem;
-        flex: 1;
-        background: var(--detail-container-color);
-        border-radius: 2rem;
-        border: var(--border-color) 0.1rem solid;
-        border-color: var(--border-color-2);
-        text-align: center;
-      }
+.experience-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.experience-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.experience-list div i{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.experience-list div h2{
+  font-size:  30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--gold-color);
+}
+
+.experience-list div a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.experience-list div:hover{
+  background:#ff004f;
+  transform: translateY(-10px);
+
+}
+.experience-list ul li p{
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+#progressBar{
+  width: 90%; 
+  height: 15px;
+  background-color: #000000;
+  border-radius: 5px;
+  border: none;
+  
+}

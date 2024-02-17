@@ -1,26 +1,27 @@
-import React from 'react';
+import React, {lazy,Suspense} from 'react'
 
-import Header from './Components/Header/Header';
-import Profile from './Components/Profile/Profile';
-import About from './Components/About/About';
-import Experience from './Components/Experience/Experience';
-import Projects from './Components/Projects/Projects';
-import Contact from './Components/Contact/Contact';
-import Footer from './Components/Footer/Footer';
-
+import Header from './Components/Header/Header'
+const Profile = lazy(() => import('./Components/Profile/Profile'))
+const About = lazy(() => import('./Components/About/About'))
+const Experience = lazy(() => import('./Components/Experience/Experience'))
+const Projects = lazy(() => import('./Components/Projects/Projects'))
+const Contact = lazy(() => import('./Components/Contact/Contact'))
+const Footer = lazy(() => import('./Components/Footer/Footer'))
 function App() {
 
   return (
       <div className="App">
         <Header/>
+        <Suspense fallback={<div>Loading...</div>}>
         <Profile/>
         <About/>
         <Experience/>
         <Projects/>
         <Contact/>
         <Footer/>
+        </Suspense>
       </div>
-  );
+  )
 }
 
-export default App;
+export default App
