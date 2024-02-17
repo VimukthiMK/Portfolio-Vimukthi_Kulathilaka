@@ -41,11 +41,11 @@ const Profile = () => {
             src={profileImage}
             alt="profile"
             className="prof_img"
-          />
+          />  
         </div>
         <div className="section-text">
           <p className="section-text-p1">Hello, I'm</p>
-          <h1 className="title">Vimukthi Kulathilaka</h1>
+          <h1 className="title" id='title'>Vimukthi Kulathilaka</h1>
           <div className='Animate_text-container'>
             <p className="section-text-p2" id="section-text-p2" >And I'm a Software Developer</p>
           </div>

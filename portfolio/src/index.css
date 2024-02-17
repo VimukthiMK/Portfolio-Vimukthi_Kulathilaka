@@ -117,6 +117,9 @@ section {
   #profile {
     height: 83vh;
     margin-bottom: 0;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
   }
   article {
     font-size: 1rem;
@@ -155,22 +158,26 @@ section {
     width: auto;
     height: 46vw;
     justify-content: center;
+    padding-top: 3rem;
   }
-  .section-text-p2 {
-    font-size: 1.25rem;
+  .section-pic-container .prof_img{
+    height: 30vh;
+    width: auto;
   }
-  .title {
+  #section-text-p2 {
+    font-size: 1.2rem;
+
+  }
+  #title {
     font-size: 2rem;
   }
   .text-container {
     text-align: justify;
   }
   #contact {
-    padding-top: 20rem;
-    padding-bottom: 20rem;
-  
-  }
-  
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+     }
 }
 
   
