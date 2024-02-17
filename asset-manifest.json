@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.1ec04249.css",
-    "main.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.3c182d0f.js",
+    "main.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.41eeca55.css",
+    "main.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.4d400e8d.js",
     "static/css/987.b35f30cb.chunk.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/987.b35f30cb.chunk.css",
-    "static/js/987.9e5029fa.chunk.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/987.9e5029fa.chunk.js",
+    "static/js/987.af959990.chunk.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/987.af959990.chunk.js",
     "static/css/146.81d7f548.chunk.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/146.81d7f548.chunk.css",
     "static/js/146.9c310049.chunk.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/146.9c310049.chunk.js",
     "static/css/168.85c1ff57.chunk.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/168.85c1ff57.chunk.css",
@@ -24,10 +24,10 @@
     "static/media/email.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/email.761df3bc69bdc631bd2f.png",
     "static/media/linkedin.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/linkedin.032cf8a63be2f0f4d425.png",
     "index.html": "/Portfolio-Vimukthi_Kulathilaka/index.html",
-    "main.1ec04249.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.1ec04249.css.map",
-    "main.3c182d0f.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.3c182d0f.js.map",
+    "main.41eeca55.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.41eeca55.css.map",
+    "main.4d400e8d.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.4d400e8d.js.map",
     "987.b35f30cb.chunk.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/987.b35f30cb.chunk.css.map",
-    "987.9e5029fa.chunk.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/987.9e5029fa.chunk.js.map",
+    "987.af959990.chunk.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/987.af959990.chunk.js.map",
     "146.81d7f548.chunk.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/146.81d7f548.chunk.css.map",
     "146.9c310049.chunk.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/146.9c310049.chunk.js.map",
     "168.85c1ff57.chunk.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/168.85c1ff57.chunk.css.map",
@@ -41,7 +41,7 @@
     "861.4c0932f7.chunk.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/861.4c0932f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ec04249.css",
-    "static/js/main.3c182d0f.js"
+    "static/css/main.41eeca55.css",
+    "static/js/main.4d400e8d.js"
   ]
 }
