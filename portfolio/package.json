@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "2.0",
   "private": true,
-  "homepage": "https://vimukthimk.github.io/Portfolio-Vimukthi_Kulathilaka/",
+  "homepage": "https://vimukthimk.github.io/Portfolio-Vimukthi_Kulathilaka",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
@@ -19,8 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+    "gh-pages": "^6.1.1"
   }
 }
