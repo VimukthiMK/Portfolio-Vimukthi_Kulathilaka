@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/110.6cdb9dbb.chunk.css","mappings":"AAAA,OACI,WAAY,CACZ,aACF,CAEA,SACE,iBACF","sources":["Components/Footer/Footer.css"],"sourcesContent":["footer {\r\n    height: 26vh;\r\n    margin: 0 1rem;\r\n  }\r\n  \r\n  footer p {\r\n    text-align: center;\r\n  }"],"names":[],"sourceRoot":""}
