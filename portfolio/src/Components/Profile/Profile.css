@@ -104,6 +104,7 @@
   
   .contact-btn:hover {
     background: none;
+    color: var(--link-color);
   }
   
   .contact-btn {

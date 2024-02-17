@@ -14,7 +14,6 @@ const Profile = () => {
     let index = 0
 
     function typeAndErase() {
-      const currentText = textElement.innerText
       const speed = 100 // Animation speed
       const pauseTime = 1000 // Pause time
 
@@ -40,7 +39,7 @@ const Profile = () => {
         <div className="section-pic-container">
           <img
             src={profileImage}
-            alt="profile picture"
+            alt="profile"
             className="prof_img"
           />
         </div>
