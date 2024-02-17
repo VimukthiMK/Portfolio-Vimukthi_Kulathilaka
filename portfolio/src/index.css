@@ -4,17 +4,16 @@
 
 :root{
     --link-color: white;
-    --link-hover-color: grey;
+    --link-hover-color: #ff004f;
     --bg-color: black; 
     --p-color: rgb(35, 223, 207);
     --text-decoration-color:rgb(181, 181, 181); 
     --border-color:rgb(53, 53, 53);
     --border-color-2:rgb(163, 163, 163);
-    --detail-container-color:rgb(59, 56, 56);
-     
-  
-  
-  
+    --detail-container-color:#262626; 
+    --gold-color:goldenrod;
+
+
   }
   *{
     margin: 0;
@@ -27,9 +26,7 @@
   }
   body {
    font-family: 'Poppins', sans-serif;
-   background-color: var(--bg-color);
-   
-  
+   background-color: var(--bg-color); 
   }
   
  body {

@@ -3,19 +3,17 @@ import'./Header.css'
 import ToggleMenu from './Togglemenu'
 
 
-export default function Header() {
+const Header = () => {
   return (
     <>
     <nav id="desktop-nav">
-      <div className="logo">Vimukthi</div>
+      <button className="logo" onClick={() => window.location.href = '.#profile'} >Vimukthi</button>
       <div>
         <ul className="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-            
-           
+          <li><a href="#contact">Contact</a></li>           
         </ul>
       </div>
     </nav>
@@ -23,7 +21,7 @@ export default function Header() {
     {/* Hamburger Navigation */}
 
     <nav id="hamburger-nav">
-        <div className="logo">Vimukthi</div>
+      <button className="logo" onClick={() => window.location.href = '.#profile'} >Vimukthi</button>
         <div className="hamburger-menu">
           <div className="hamburger-icon" onClick={ToggleMenu}>
             <span></span>
@@ -41,3 +39,4 @@ export default function Header() {
       </>
   )
 }
+export default Header

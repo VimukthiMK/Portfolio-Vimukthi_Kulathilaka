@@ -1,13 +1,11 @@
 import React from 'react'
 import './About.css'
-import aboutImage from '../../Assets/About-pic.jpg';
-import expericenceIcon from '../../Assets/experience.png';
-import eduIcon from '../../Assets/education.png';
-import arrowIcon from '../../Assets/arrow.png';
+import aboutImage from '../../Assets/About-pic.jpg'
+import expericenceIcon from '../../Assets/experience.png'
+import eduIcon from '../../Assets/education.png'
 
-
-
-export default function About() {
+const About = () => {
+  
   return (
     <section id="about">
       <p className="section-text-p1">Get To Know More</p>
@@ -47,17 +45,12 @@ export default function About() {
             </p>
             <br />
             <p>
-              Outside of my professional pursuits, I believe in leading a well-rounded life. I find happiness in exploring new places and experiencing diverse cultures through travel. Music isn't just a tune to me; it's a way to express myself and find inspiration. I'm also an avid gamer, enjoying the blend of strategy and creativity in virtual worlds. Additionally, my curiosity about the fusion of technology and mobility is fueled by my fascination with automobiles.
+              Outside of my professional pursuits, I believe in leading a well-rounded life. I find happiness in exploring new places and experiencing diverse cultures through travel. Music isn't just a tune to me it's a way to express myself and find inspiration. I'm also an avid gamer, enjoying the blend of strategy and creativity in virtual worlds. Additionally, my curiosity about the fusion of technology and mobility is fueled by my fascination with automobiles.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src={arrowIcon}
-        alt="Arrow icon"
-        className="icon arrow"
-        onClick={() => window.location.href = '#experience'}
-      />
     </section>
   )
 }
+export default About
