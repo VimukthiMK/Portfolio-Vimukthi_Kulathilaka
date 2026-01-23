@@ -45,7 +45,7 @@ const Header = () => {
           "backdrop-blur-lg",
           "shadow-sm",
           "dark:bg-darkTheme",
-          "dark:shadow-white/20"
+          "dark:shadow-white/20",
         );
 
         navLinkRef.current?.classList.remove(
@@ -54,7 +54,7 @@ const Header = () => {
           "bg-opacity-50",
           "dark:border",
           "dark:border-white/30",
-          "dark:bg-transparent"
+          "dark:bg-transparent",
         );
       } else {
         navRef.current?.classList.remove(
@@ -63,7 +63,7 @@ const Header = () => {
           "backdrop-blur-lg",
           "shadow-sm",
           "dark:bg-darkTheme",
-          "dark:shadow-white/20"
+          "dark:shadow-white/20",
         );
 
         navLinkRef.current?.classList.add(
@@ -72,7 +72,7 @@ const Header = () => {
           "bg-opacity-50",
           "dark:border",
           "dark:border-white/30",
-          "dark:bg-transparent"
+          "dark:bg-transparent",
         );
       }
     };
@@ -80,7 +80,9 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
 
     const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
 
     if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
       document.documentElement.classList.add("dark");
@@ -91,7 +93,14 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = ["Home", "About me", "Services", "Projects", "Blogs", "Contact me"];
+  const menuItems = [
+    "Home",
+    "About me",
+    "Services",
+    "Projects",
+    "Blogs",
+    "Contact me",
+  ];
 
   return (
     <>
@@ -107,8 +116,11 @@ const Header = () => {
         {/* logo */}
         <a href="#top">
           <img src={logoLight} alt="Logo" className="w-36 mr-14 dark:hidden" />
-          <img src={logoDark} alt="Logo" className="hidden w-36 mr-14 dark:block" />
-
+          <img
+            src={logoDark}
+            alt="Logo"
+            className="hidden w-36 mr-14 dark:block"
+          />
         </a>
 
         {/* desktop menu */}

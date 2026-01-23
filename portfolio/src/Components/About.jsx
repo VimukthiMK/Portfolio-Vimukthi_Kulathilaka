@@ -21,10 +21,15 @@ const hoverUp = {
   },
 };
 
-const About = () => {
-  const [activeTab, setActiveTab] = useState("Education");
-
   const educationData = [
+        {
+      title: "Ananda College, Colombo 10, Sri Lanka",
+      year: "2011 - 2019",
+      description:
+        "School Education | Physical Science Stream | 2A 1C | z-Score - 1.6770",
+      icon1: eduIcon,
+      icon2: eduIconDark,
+    },
     {
       title:
         "Bsc(Hons)Software Engineering - University of Kelaniya, Sri Lanka",
@@ -33,17 +38,17 @@ const About = () => {
       icon1: eduIcon,
       icon2: eduIconDark,
     },
-    {
-      title: "Ananda College, Colombo 10, Sri Lanka",
-      year: "2011 - 2019",
-      description:
-        "School Education | Physical Science Stream | 2A 1C | z-Score - 1.6770",
-      icon1: eduIcon,
-      icon2: eduIconDark,
-    },
   ];
 
-  const workData = [
+    const workData = [
+       {
+      title: "Intern Software Engineer | icieos (Pvt) Ltd",
+      year: "Jun 2024 – Jan 2025",
+      description:
+        "Participated in cross-functional full-stack development projects within a fast-paced Agile environment, contributing to both backend and frontend services using React.js, Spring Boot, Node.js, and Next.js. Worked closely with team leads to improve internal processes through iterative API development and performance tuning. Contributed to UI/UX enhancements by refining interfaces and translating requirements into intuitive designs using Figma, HTML, CSS, and Tailwind. Actively engaged in quality assurance through API testing with Postman and collaborative debugging sessions.",
+      icon1: projectIcon,
+      icon2: projectIconDark,
+    },
     {
       title: "Associate Software Engineer | icieos (Pvt) Ltd",
       year: "Jan 2025 – May 2025",
@@ -52,17 +57,9 @@ const About = () => {
       icon1: projectIcon,
       icon2: projectIconDark,
     },
-    {
-      title: "Intern Software Engineer | icieos (Pvt) Ltd",
-      year: "Jun 2024 – Jan 2025",
-      description:
-        "Participated in cross-functional full-stack development projects within a fast-paced Agile environment, contributing to both backend and frontend services using React.js, Spring Boot, Node.js, and Next.js. Worked closely with team leads to improve internal processes through iterative API development and performance tuning. Contributed to UI/UX enhancements by refining interfaces and translating requirements into intuitive designs using Figma, HTML, CSS, and Tailwind. Actively engaged in quality assurance through API testing with Postman and collaborative debugging sessions.",
-      icon1: projectIcon,
-      icon2: projectIconDark,
-    },
   ];
 
-  // Tools with Skillicons CDN
+   // Tools with Skillicons CDN
   const tools = [
     "c",
     "java",
@@ -98,6 +95,9 @@ const About = () => {
     name: tool,
     icon: `https://skillicons.dev/icons?i=${tool}`,
   }));
+
+const About = () => {
+  const [activeTab, setActiveTab] = useState("Education");
 
   return (
     <motion.div
@@ -157,7 +157,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
         >
-          {(activeTab === "Education" ? educationData : workData).map(
+          {(activeTab === "Education" ? educationData : workData).reverse().map(
             (item, index) => (
               <motion.li
                 key={index}

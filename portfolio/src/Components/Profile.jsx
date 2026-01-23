@@ -25,7 +25,7 @@ const fadeInUp = {
 const Profile = () => {
   return (
     <motion.div
-    id="home"
+      id="home"
       className="flex flex-col items-center justify-center w-11/12 h-screen max-w-3xl gap-4 mx-auto text-center"
       variants={containerVariants}
       initial="hidden"
@@ -58,11 +58,11 @@ const Profile = () => {
       </motion.h1>
 
       {/* Description */}
-      <motion.p
-        className="max-w-3xl mx-auto font-Ovo"
-        variants={fadeInUp}
-      >
-I am a Full Stack Developer with a BSc (Hons) in Software Engineering and solid industry expertise. Passionate about building scalable, user-focused applications.      </motion.p>
+      <motion.p className="max-w-3xl mx-auto font-Ovo" variants={fadeInUp}>
+        I am a Full Stack Developer with a BSc (Hons) in Software Engineering
+        and solid industry expertise. Passionate about building scalable,
+        user-focused applications.{" "}
+      </motion.p>
 
       {/* Buttons */}
       <motion.div
@@ -87,7 +87,8 @@ I am a Full Stack Developer with a BSc (Hons) in Software Engineering and solid 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          my resume <img src={downIcon} alt="Download" className="w-4 dark:invert" />
+          my resume{" "}
+          <img src={downIcon} alt="Download" className="w-4 dark:invert" />
         </motion.a>
       </motion.div>
     </motion.div>
