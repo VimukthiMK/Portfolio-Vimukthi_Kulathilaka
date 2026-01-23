@@ -4,20 +4,24 @@ import "./app.css";
 import Header from './Components/Header'
 import Profile from './Components/Profile'
 import About from './Components/About'
-import Experience from './Components/Experience'
+import Services from './Components/Services'
 import Projects from './Components/Projects'
+import Blogs from './Components/Blogs'
 import Contact from './Components/Contact'
 import Footer from './Components/Footer'
+import LenisScroll from './Components/LenisScroll'
 
 function App() {
 
   return (
        <div className="App font-outfit">
+      <LenisScroll />
       <Header />
       <Profile />
       <About />
-      <Experience />
+      <Services />
       <Projects />
+      <Blogs/>
       <Contact />
       <Footer />
     </div>

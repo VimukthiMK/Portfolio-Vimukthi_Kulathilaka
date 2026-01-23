@@ -91,7 +91,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuItems = ["Home", "About me", "Projects", "Blogs", "Contact me"];
+  const menuItems = ["Home", "About me", "Services", "Projects", "Blogs", "Contact me"];
 
   return (
     <>
