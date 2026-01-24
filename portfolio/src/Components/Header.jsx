@@ -172,7 +172,7 @@ const Header = () => {
 
           {menuItems.map((item, i) => (
             <li key={i}>
-              <a href="#" onClick={closeMenu}>
+              <a href={`#${item.split(" ")[0].toLowerCase()}`} onClick={closeMenu}> 
                 {item}
               </a>
             </li>

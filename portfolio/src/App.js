@@ -1,5 +1,6 @@
 import React from "react";
 import "./app.css";
+import { ToastContainer } from "react-toastify";
 
 import Header from "./Components/Header";
 import Profile from "./Components/Profile";
@@ -11,7 +12,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
 import LenisScroll from "./Components/LenisScroll";
-import { ToastContainer } from "react-toastify";
+import SocialMedia from "./Components/SocialMedia";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       <Blogs />
       <Contact />
       <Footer />
+
+        {/* Fixed Social Icons */}
+      <SocialMedia />
+
       <ToastContainer
         position="top-center"
         autoClose={4000}

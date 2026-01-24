@@ -98,6 +98,15 @@ const cardVariants = {
   },
 };
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(4);
 
@@ -133,7 +142,13 @@ const Projects = () => {
         expertise in Software Development.
       </motion.p>
 
-      <motion.div className="grid gap-6 my-10 sm:grid-cols-2 lg:grid-cols-4">
+      <motion.div
+        className="grid gap-6 my-10 sm:grid-cols-2 lg:grid-cols-4"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {work.map((item) => (
           <motion.div
             key={item.name}

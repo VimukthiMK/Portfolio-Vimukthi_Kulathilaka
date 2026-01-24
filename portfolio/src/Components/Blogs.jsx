@@ -83,6 +83,15 @@ const Blogs = () => {
     },
   };
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <motion.div
       id="blogs"
@@ -111,13 +120,18 @@ const Blogs = () => {
         Read my latest blogs on development, frameworks, and best practices.
       </motion.p>
 
-      <motion.div className="grid gap-6 my-10 sm:grid-cols-2 lg:grid-cols-4">
+      <motion.div
+        className="grid gap-6 my-10 sm:grid-cols-2 lg:grid-cols-4"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         {blogs.map((blog) => (
           <motion.div
             key={blog.title}
             onClick={() => window.open(blog.url, "_blank")}
             className="flex flex-col justify-between overflow-hidden transition-all duration-300 border border-gray-200 rounded-lg cursor-pointer bg-gray-50 group dark:bg-darkHover dark:border-white/20 hover:-translate-y-1"
-            variants={cardVariants}
             whileHover="hover"
           >
             {/* Blog Image */}

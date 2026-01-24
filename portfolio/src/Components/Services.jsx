@@ -60,6 +60,14 @@ const cardVariants = {
   exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
 };
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 const Services = () => {
   return (
     <motion.div
@@ -94,7 +102,7 @@ const Services = () => {
       {/* Grid container */}
       <motion.div
         className="grid gap-6 my-10 sm:grid-cols-2 lg:grid-cols-4"
-        variants={containerVariants}
+        variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -104,7 +112,6 @@ const Services = () => {
           <motion.div
             key={service.name}
             className="px-8 py-12 border border-gray-300 rounded-lg cursor-pointer dark:border-white/30 hover:bg-lightHover dark:hover:bg-darkHover hover:-translate-y-1 hover:shadow-black dark:hover:shadow-white"
-            variants={cardVariants}
             whileHover="hover"
           >
             <img src={service.icon} alt={service.name} className="w-10" />
