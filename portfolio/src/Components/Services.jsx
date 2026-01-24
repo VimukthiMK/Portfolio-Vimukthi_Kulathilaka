@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Import all icons
-import webIcon from "../assets/web-icon.png";
-import mobileIcon from "../assets/mobile-icon.png";
-import uiIcon from "../assets/ui-icon.png";
-import graphicsIcon from "../assets/graphics-icon.png";
-import arrowIcon from "../assets/right-arrow.png";
+import webIcon from "../assets/ui/web-icon.png";
+import mobileIcon from "../assets/ui/mobile-icon.png";
+import uiIcon from "../assets/ui/ui-icon.png";
+import graphicsIcon from "../assets/ui/graphics-icon.png";
+import arrowIcon from "../assets/ui/right-arrow.png";
 
 const services = [
   {

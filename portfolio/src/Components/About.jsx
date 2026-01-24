@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import eduIcon from "../assets/edu-icon.png";
-import eduIconDark from "../assets/edu-icon-dark.png";
-import projectIcon from "../assets/project-icon.png";
-import projectIconDark from "../assets/project-icon-dark.png";
+import eduIcon from "../assets/ui/edu-icon.png";
+import eduIconDark from "../assets/ui/edu-icon-dark.png";
+import projectIcon from "../assets/ui/project-icon.png";
+import projectIconDark from "../assets/ui/project-icon-dark.png";
 
 // Motion Variants
 const fadeInUp = {

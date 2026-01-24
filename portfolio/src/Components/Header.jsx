@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from "react";
 
 // Import all images
-import headerBg from "../assets/header-bg-color.png";
-import logoLight from "../assets/logo.png";
-import logoDark from "../assets/logo_dark.png";
-import moonIcon from "../assets/moon_icon.png";
-import sunIcon from "../assets/sun_icon.png";
-import menuBlack from "../assets/menu-black.png";
-import menuWhite from "../assets/menu-white.png";
-import closeBlack from "../assets/close-black.png";
-import closeWhite from "../assets/close-white.png";
+import headerBg from "../assets/ui/header-bg-color.png";
+import logoLight from "../assets/logo/logo.png";
+import logoDark from "../assets/logo/logo_dark.png";
+import moonIcon from "../assets/ui/moon_icon.png";
+import sunIcon from "../assets/ui/sun_icon.png";
+import menuBlack from "../assets/ui/menu-black.png";
+import menuWhite from "../assets/ui/menu-white.png";
+import closeBlack from "../assets/ui/close-black.png";
+import closeWhite from "../assets/ui/close-white.png";
 
 const Header = () => {
   const sideMenuRef = useRef(null);

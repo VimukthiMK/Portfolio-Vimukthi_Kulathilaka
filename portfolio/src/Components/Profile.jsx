@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import profileImg from "../assets/profile.png";
-import handIcon from "../assets/hand-icon.png";
-import downIcon from "../assets/download-icon.png";
-import arrowIcon from "../assets/right-arrow-white.png";
-import resumePdf from "../assets/CV_Vimukthi-Kulathilaka.pdf";
+import profileImg from "../assets/profile/profile.png";
+import handIcon from "../assets/ui/hand-icon.png";
+import downIcon from "../assets/ui/download-icon.png";
+import arrowIcon from "../assets/ui/right-arrow-white.png";
+import resumePdf from "../assets/profile/CV_Vimukthi-Kulathilaka.pdf";
 
 const containerVariants = {
   hidden: {},

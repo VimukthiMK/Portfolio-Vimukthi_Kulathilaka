@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedinIn, FaMediumM, FaWhatsapp } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 
 // Image imports
-import logoLight from "../assets/logo.png";
-import logoDark from "../assets/logo_dark.png";
+import logoLight from "../assets/logo/logo.png";
+import logoDark from "../assets/logo/logo_dark.png";
 
  const containerVariants = {
     hidden: { opacity: 0, y: 30 },

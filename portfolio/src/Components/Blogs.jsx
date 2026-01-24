@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import arrowLight from "../assets/right-arrow-bold.png";
-import arrowDark from "../assets/right-arrow-bold-dark.png";
+import arrowLight from "../assets/ui/right-arrow-bold.png";
+import arrowDark from "../assets/ui/right-arrow-bold-dark.png";
 
 // Import Blog images
 import blogImg1 from "../assets/blogs/soft-license.webp";
