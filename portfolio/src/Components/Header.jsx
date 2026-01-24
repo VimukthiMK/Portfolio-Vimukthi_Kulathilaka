@@ -163,7 +163,7 @@ const Header = () => {
         {/* mobile menu */}
         <ul
           ref={sideMenuRef}
-          className="fixed top-0 bottom-0 flex flex-col w-64 gap-4 px-10 py-20 transition duration-500 md:hidden -right-64 bg-rose-50 font-Ovo dark:bg-darkHover"
+          className="fixed top-0 bottom-0 flex flex-col w-64 gap-4 px-10 py-20 transition duration-500 md:hidden -right-64 bg-rose-50 font-Ovo dark:bg-darkHover z-[999]"
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <img src={closeBlack} className="w-5 dark:hidden" />

@@ -21,80 +21,79 @@ const hoverUp = {
   },
 };
 
-  const educationData = [
-        {
-      title: "Ananda College, Colombo 10, Sri Lanka",
-      year: "2011 - 2019",
-      description:
-        "School Education | Physical Science Stream | 2A 1C | z-Score - 1.6770",
-      icon1: eduIcon,
-      icon2: eduIconDark,
-    },
-    {
-      title:
-        "Bsc(Hons)Software Engineering - University of Kelaniya, Sri Lanka",
-      year: "2021 - 2025",
-      description: "Class : Second Class Upper Division",
-      icon1: eduIcon,
-      icon2: eduIconDark,
-    },
-  ];
+const educationData = [
+  {
+    title: "Bsc(Hons)Software Engineering - University of Kelaniya, Sri Lanka",
+    year: "2021 - 2025",
+    description: "Class : Second Class Upper Division",
+    icon1: eduIcon,
+    icon2: eduIconDark,
+  },
+  {
+    title: "Ananda College, Colombo 10, Sri Lanka",
+    year: "2011 - 2019",
+    description:
+      "School Education | Physical Science Stream | 2A 1C | z-Score - 1.6770",
+    icon1: eduIcon,
+    icon2: eduIconDark,
+  },
+];
 
-    const workData = [
-       {
-      title: "Intern Software Engineer | icieos (Pvt) Ltd",
-      year: "Jun 2024 – Jan 2025",
-      description:
-        "Participated in cross-functional full-stack development projects within a fast-paced Agile environment, contributing to both backend and frontend services using React.js, Spring Boot, Node.js, and Next.js. Worked closely with team leads to improve internal processes through iterative API development and performance tuning. Contributed to UI/UX enhancements by refining interfaces and translating requirements into intuitive designs using Figma, HTML, CSS, and Tailwind. Actively engaged in quality assurance through API testing with Postman and collaborative debugging sessions.",
-      icon1: projectIcon,
-      icon2: projectIconDark,
-    },
-    {
-      title: "Associate Software Engineer | icieos (Pvt) Ltd",
-      year: "Jan 2025 – May 2025",
-      description:
-        "Served as an internal supervisor for internship teams, supporting task planning, mentoring, and progress reviews while acting as the project reporter for two major software projects. Contributed to software development with a strong focus on quality, timelines, and Agile delivery. Gained hands-on experience in project coordination using Jira and Confluence, translating business requirements into actionable sprint goals, and collaborating closely with cross-functional teams to ensure smooth execution and stakeholder alignment.",
-      icon1: projectIcon,
-      icon2: projectIconDark,
-    },
-  ];
+const workData = [
+  {
+    title: "Associate Software Engineer | icieos (Pvt) Ltd",
+    year: "Jan 2025 – May 2025",
+    description:
+      "Served as an internal supervisor for internship teams, supporting task planning, mentoring, and progress reviews while acting as the project reporter for two major software projects. Contributed to software development with a strong focus on quality, timelines, and Agile delivery. Gained hands-on experience in project coordination using Jira and Confluence, translating business requirements into actionable sprint goals, and collaborating closely with cross-functional teams to ensure smooth execution and stakeholder alignment.",
+    icon1: projectIcon,
+    icon2: projectIconDark,
+  },
+  {
+    title: "Intern Software Engineer | icieos (Pvt) Ltd",
+    year: "Jun 2024 – Jan 2025",
+    description:
+      "Participated in cross-functional full-stack development projects within a fast-paced Agile environment, contributing to both backend and frontend services using React.js, Spring Boot, Node.js, and Next.js. Worked closely with team leads to improve internal processes through iterative API development and performance tuning. Contributed to UI/UX enhancements by refining interfaces and translating requirements into intuitive designs using Figma, HTML, CSS, and Tailwind. Actively engaged in quality assurance through API testing with Postman and collaborative debugging sessions.",
+    icon1: projectIcon,
+    icon2: projectIconDark,
+  },
+];
 
-   // Tools with Skillicons CDN
-  const tools = [
-    "c",
-    "java",
-    "js",
-    "ts",
-    "php",
-    "python",
-    "dart",
-    "html",
-    "css",
-    "spring",
-    "react",
-    "redux",
-    "nodejs",
-    "express",
-    "nextjs",
-    "flutter",
-    "tailwind",
-    "mysql",
-    "postgres",
-    "mongodb",
-    "sqlite",
-    "docker",
-    "redis",
-    "aws",
-    "git",
-    "github",
-    "postman",
-    "firebase",
-    "figma",
-    "vscode",
-  ].map((tool) => ({
-    name: tool,
-    icon: `https://skillicons.dev/icons?i=${tool}`,
-  }));
+// Tools with Skillicons CDN
+const tools = [
+  "c",
+  "java",
+  "js",
+  "ts",
+  "php",
+  "python",
+  "dart",
+  "html",
+  "css",
+  "spring",
+  "react",
+  "redux",
+  "nodejs",
+  "express",
+  "nextjs",
+  "flutter",
+  "tailwind",
+  "mysql",
+  "postgres",
+  "mongodb",
+  "sqlite",
+  "docker",
+  "redis",
+  "aws",
+  "git",
+  "github",
+  "postman",
+  "firebase",
+  "figma",
+  "vscode",
+].map((tool) => ({
+  name: tool,
+  icon: `https://skillicons.dev/icons?i=${tool}`,
+}));
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("Education");
@@ -157,7 +156,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           exit={{ opacity: 0, y: -20, transition: { duration: 0.3 } }}
         >
-          {(activeTab === "Education" ? educationData : workData).reverse().map(
+          {(activeTab === "Education" ? educationData : workData).map(
             (item, index) => (
               <motion.li
                 key={index}
