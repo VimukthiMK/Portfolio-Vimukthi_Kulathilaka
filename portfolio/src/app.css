@@ -61,3 +61,88 @@
   }
 }
 
+/* ===== Page Loader ===== */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.dark .page-loader {
+  background-color: #0f172a;
+}
+
+/* Loader container */
+.loader {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+
+/* Expanding rings */
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #000;
+  opacity: 0;
+  animation: pulseRing 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.loader::after {
+  animation-delay: 1.2s;
+}
+
+.dark .loader::before,
+.dark .loader::after {
+  border-color: #ffffff;
+}
+
+/* Center dot */
+.loader-dot {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  background-color: #000;
+  border-radius: 50%;
+  animation: floatDot 1.6s ease-in-out infinite;
+}
+
+.dark .loader-dot {
+  background-color: #ffffff;
+}
+
+/* Animations */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes floatDot {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./app.css";
 import { ToastContainer } from "react-toastify";
 
@@ -15,6 +15,26 @@ import LenisScroll from "./Components/LenisScroll";
 import SocialMedia from "./Components/SocialMedia";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate initial load (assets, fonts, etc.)
+    const timer = setTimeout(() => setLoading(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    if (loading) {
+  return (
+    <div className="page-loader">
+      <div className="loader">
+        <span className="loader-dot" />
+      </div>
+    </div>
+  );
+}
+  }
+
   return (
     <div className="App font-outfit">
       <LenisScroll />
@@ -27,19 +47,16 @@ function App() {
       <Contact />
       <Footer />
 
-        {/* Fixed Social Icons */}
+      {/* Fixed Social Icons */}
       <SocialMedia />
 
       <ToastContainer
         position="top-center"
         autoClose={4000}
-        hideProgressBar={false}
-        newestOnTop={true}
+        newestOnTop
         closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
         pauseOnHover
+        draggable
         theme="light"
       />
     </div>
