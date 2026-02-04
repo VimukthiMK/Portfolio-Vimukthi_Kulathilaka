@@ -111,7 +111,7 @@ const Services = () => {
         {services.map((service) => (
           <motion.div
             key={service.name}
-            className="px-8 py-12 border border-gray-300 rounded-lg cursor-pointer dark:border-white/30 hover:bg-lightHover dark:hover:bg-darkHover hover:-translate-y-1 hover:shadow-black dark:hover:shadow-white"
+            className="flex flex-col h-full px-8 py-12 border border-gray-300 rounded-lg cursor-pointer dark:border-white/30 hover:bg-lightHover dark:hover:bg-darkHover hover:-translate-y-1 hover:shadow-black dark:hover:shadow-white"
             whileHover="hover"
           >
             <img src={service.icon} alt={service.name} className="w-10" />
@@ -125,9 +125,14 @@ const Services = () => {
               href={service.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 mt-5 text-sm"
+              className="flex items-center gap-2 mt-auto pt-6 text-sm"
             >
-              Read more <img src={arrowIcon} alt="" className="w-4" />
+              Read more{" "}
+              <img
+                src={arrowIcon}
+                alt=""
+                className="w-4 transition-transform group-hover:translate-x-1"
+              />
             </a>
           </motion.div>
         ))}

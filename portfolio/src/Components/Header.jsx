@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // Import all images
 import headerBg from "../assets/ui/header-bg-color.png";
@@ -12,17 +12,11 @@ import closeBlack from "../assets/ui/close-black.png";
 import closeWhite from "../assets/ui/close-white.png";
 
 const Header = () => {
-  const sideMenuRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
   const navLinkRef = useRef(null);
-
-  const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
-  };
-
-  const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
-  };
+  const menuRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   const toggleTheme = () => {
     const root = document.documentElement;
@@ -93,6 +87,29 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handleOutsideClick = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(e.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, [isMenuOpen]);
+
   const menuItems = [
     "Home",
     "About me",
@@ -154,30 +171,52 @@ const Header = () => {
             Contact
           </a>
 
-          <button className="block ml-3 md:hidden" onClick={openMenu}>
-            <img src={menuBlack} className="w-6 dark:hidden" />
-            <img src={menuWhite} className="hidden w-6 dark:block" />
+          <button
+            className="relative block ml-3 md:hidden"
+            ref={menuButtonRef}
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
+            {/* Menu icon */}
+            {!isMenuOpen && (
+              <>
+                <img src={menuBlack} className="w-6 dark:hidden" />
+                <img src={menuWhite} className="hidden w-6 dark:block" />
+              </>
+            )}
+
+            {/* Close icon */}
+            {isMenuOpen && (
+              <>
+                <img src={closeBlack} className="w-6 dark:hidden" />
+                <img src={closeWhite} className="hidden w-6 dark:block" />
+              </>
+            )}
           </button>
         </div>
 
         {/* mobile menu */}
-        <ul
-          ref={sideMenuRef}
-          className="fixed top-0 bottom-0 flex flex-col w-64 gap-4 px-10 py-20 transition duration-500 md:hidden -right-64 bg-rose-50 font-Ovo dark:bg-darkHover z-[999]"
-        >
-          <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <img src={closeBlack} className="w-5 dark:hidden" />
-            <img src={closeWhite} className="hidden w-5 dark:block" />
+        {isMenuOpen && (
+          <div
+            ref={menuRef}
+            className="absolute right-0 top-12 z-50 w-56 rounded-xl bg-white dark:bg-darkTheme shadow-lg border border-gray-200 dark:border-white/20 md:hidden animate-dropdown"
+          >
+            {/* Menu items */}
+            <ul className="flex flex-col gap-4 px-6 py-6 font-Ovo">
+              {menuItems.map((item, i) => (
+                <li key={i}>
+                  <a
+                    href={`#${item.split(" ")[0].toLowerCase()}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block text-sm hover:text-gray-500 dark:hover:text-gray-300"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          {menuItems.map((item, i) => (
-            <li key={i}>
-              <a href={`#${item.split(" ")[0].toLowerCase()}`} onClick={closeMenu}> 
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
+        )}
       </nav>
     </>
   );

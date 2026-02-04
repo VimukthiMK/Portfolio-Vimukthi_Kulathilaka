@@ -35,8 +35,8 @@ const Profile = () => {
       {/* Profile Image */}
       <motion.img
         src={profileImg}
-        alt="Profile"
-        className="w-32 rounded-full"
+        className="w-32 h-32 rounded-full object-cover bg-gray-200 dark:bg-slate-700"
+        loading="lazy"
         variants={fadeInUp}
       />
 
