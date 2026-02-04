@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.3fcc1d4e.css",
-    "main.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.ae84fa1d.js",
+    "main.css": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.342efb50.css",
+    "main.js": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.051de294.js",
     "static/media/des-shooter.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/des-shooter.3c7095e25873282a8fc1.png",
     "static/media/profile.png": "/Portfolio-Vimukthi_Kulathilaka/static/media/profile.9c1ab123deeb239c90e6.png",
     "static/media/elite-estates.PNG": "/Portfolio-Vimukthi_Kulathilaka/static/media/elite-estates.b69a82661e22a6730095.PNG",
@@ -22,11 +22,11 @@
     "static/media/os.webp": "/Portfolio-Vimukthi_Kulathilaka/static/media/os.6155ca0fdbd3c4a7311d.webp",
     "static/media/idx.webp": "/Portfolio-Vimukthi_Kulathilaka/static/media/idx.be6f5ff633641302f21a.webp",
     "index.html": "/Portfolio-Vimukthi_Kulathilaka/index.html",
-    "main.3fcc1d4e.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.3fcc1d4e.css.map",
-    "main.ae84fa1d.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.ae84fa1d.js.map"
+    "main.342efb50.css.map": "/Portfolio-Vimukthi_Kulathilaka/static/css/main.342efb50.css.map",
+    "main.051de294.js.map": "/Portfolio-Vimukthi_Kulathilaka/static/js/main.051de294.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fcc1d4e.css",
-    "static/js/main.ae84fa1d.js"
+    "static/css/main.342efb50.css",
+    "static/js/main.051de294.js"
   ]
 }
