@@ -100,12 +100,13 @@ const About = () => {
 
   return (
     <motion.div
-      id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20 flex flex-col items-center relative"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
+  id="about"
+  className="w-full px-[12%] py-16 scroll-mt-20 flex flex-col items-center relative"
+  initial={{ opacity: 0, y: 80 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
       <motion.h4
         className="mb-2 text-lg text-center font-Ovo"
         variants={fadeInUp}

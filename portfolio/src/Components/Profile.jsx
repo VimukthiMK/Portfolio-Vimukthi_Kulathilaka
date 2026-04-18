@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import profileImg from "../assets/profile/profile.png";
 import handIcon from "../assets/ui/hand-icon.png";
@@ -7,91 +7,113 @@ import downIcon from "../assets/ui/download-icon.png";
 import arrowIcon from "../assets/ui/right-arrow-white.png";
 import resumePdf from "../assets/profile/CV_Vimukthi-Kulathilaka.pdf";
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
-};
-
 const Profile = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  // Parallax transforms
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "120%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   return (
-    <motion.div
+    <section
+      ref={ref}
       id="home"
-      className="flex flex-col items-center justify-center w-11/12 h-screen max-w-3xl gap-4 mx-auto text-center"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      className="relative flex items-center justify-center h-screen overflow-hidden"
     >
-      {/* Profile Image */}
-      <motion.img
-        src={profileImg}
-        className="w-32 h-32 rounded-full object-cover bg-gray-200 dark:bg-slate-700"
-        loading="lazy"
-        variants={fadeInUp}
-      />
-
-      {/* Greeting */}
-      <motion.h3
-        className="flex items-end gap-2 mb-3 text-xl md:text-2xl font-Ovo"
-        variants={fadeInUp}
-      >
-        Hi! I&apos;m Vimukthi Kulathilaka
-        <img src={handIcon} alt="Hand" className="w-6 mb-1" />
-      </motion.h3>
-
-      {/* Main Heading */}
-      <motion.h1
-        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
-        variants={fadeInUp}
-      >
-        Software Developer based in Sri Lanka.
-      </motion.h1>
-
-      {/* Description */}
-      <motion.p className="max-w-3xl mx-auto font-Ovo" variants={fadeInUp}>
-        I am a Full Stack Developer with a BSc (Hons) in Software Engineering
-        and solid industry expertise. Passionate about building scalable,
-        user-focused applications.{" "}
-      </motion.p>
-
-      {/* Buttons */}
+      {/* Background Parallax */}
       <motion.div
-        className="flex flex-col items-center gap-4 mt-4 sm:flex-row"
-        variants={fadeInUp}
+        style={{ y: bgY }}
+        className="absolute inset-0 -z-10"
       >
-        <motion.a
-          href="#contact"
-          className="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          contact me <img src={arrowIcon} alt="Arrow" className="w-4" />
-        </motion.a>
-
-        <motion.a
-          href={resumePdf}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-          className="px-10 py-2.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center gap-2 bg-white dark:bg-transparent dark:text-white"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          my resume{" "}
-          <img src={downIcon} alt="Download" className="w-4 dark:invert" />
-        </motion.a>
+        <div
+          className="w-full h-full bg-cover bg-center opacity-20 dark:opacity-10"
+          style={{
+            backgroundImage:
+              "url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2hzdHp2NW4yNnd5Zndqd2xsb3N0MHFvdHVtd25mOXZ5a254OHAweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/doXBzUFJRxpaUbuaqz/giphy.gif')",
+          }}
+        />
       </motion.div>
-    </motion.div>
+
+      {/* Content */}
+      <motion.div
+        style={{ y: textY, opacity }}
+        className="flex flex-col items-center w-11/12 max-w-3xl gap-4 mx-auto text-center"
+      >
+        {/* Profile Image (floating) */}
+        <motion.img
+          src={profileImg}
+          className="w-32 h-32 rounded-full object-cover bg-gray-200 dark:bg-slate-700"
+          loading="lazy"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 3, repeat: Infinity }}
+        />
+
+        {/* Greeting */}
+        <h3 className="flex items-end gap-2 mb-2 text-xl md:text-2xl font-Ovo">
+          Hi! I&apos;m Vimukthi Kulathilaka
+          <img src={handIcon} alt="hand" className="w-6 mb-1" />
+        </h3>
+
+        {/* Title */}
+        <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
+          Software Developer based in Sri Lanka.
+        </h1>
+
+        {/* Description */}
+        <p className="max-w-2xl font-Ovo">
+          I am a Full Stack Developer with a BSc (Hons) in Software Engineering
+          and solid industry expertise. Passionate about building scalable,
+          user-focused applications.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col items-center gap-4 mt-4 sm:flex-row">
+          <motion.a
+            href="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector("#about").scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-10 py-2.5 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2"
+          >
+            Explore More
+            <img src={arrowIcon} alt="" className="w-4" />
+          </motion.a>
+
+          <motion.a
+            href={resumePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-10 py-2.5 rounded-full border border-gray-300 dark:border-white/25 flex items-center gap-2 bg-white dark:bg-transparent dark:text-white"
+          >
+            My Resume
+            <img src={downIcon} alt="" className="w-4 dark:invert" />
+          </motion.a>
+        </div>
+      </motion.div>
+
+      {/*Scroll Indicator */}
+      <motion.div
+        className="absolute text-sm bottom-6 opacity-70"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 1.5 }}
+      >
+        ↓ Scroll Down
+      </motion.div>
+    </section>
   );
 };
 
